@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FisiCode</title>
+        <meta charset="UTF-8">
+        <link rel="StyleSheet" href="estilos.css" type="text/css">
+        <style>
+            .contenedor {
+                display: flex;
+                justify-content: space-between
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inicio">
+            <img src="header.jpg" alt="animacion" height="150px" width="1355px">
+        </div>
+        <div class="anclas" style="background-color:rgb(212, 212, 212);">
+            <a href="#Introduccion">Introduccion</a>  <a href="#Formulas">Fórmulas</a>  <a href="#Calculo">Calculo</a>
+        </div>
+        <h1 class="titulo">Aprendamos Física</h1>
+        <p style="font-size: 40px;">
+            En la presente página dedicada al mundo de la física, nos proponemos a mostrar y explicar diversos temas, en este particular caso, explicaremos sobre el movimiento rectilíneo uniforme por sus abreviaturas (MRU), el cual es un tema fácil de aprender, y con ésta página será aún mucho más fácil.
+        </p>
+        <h2>Tema: Movimiento Rectilíneo Uniforme</h2>
+        <a name="Introduccion">
+            <h3>Introducción</h3>
+        <p>
+            El MRU se define el movimiento en el cual un objeto se desplaza en línea recta, en una sola dirección, recorriendo distancias iguales en el mismo intervalo de tiempo, manteniendo en todo su movimiento una velocidad constante y sin aceleración
+        </p>
+        <div style="text-align: center;">
+            <img src="imagen1.jpg" alt="imagen" width="300px" height="300px">
+        </div>
+        <a name="Formulas"></a>
+        <h3>Fórmulas:</h3>
+        <div class="contenedor">
+            <div>
+                <li>
+                    <ul><strong>Distancia = Velocidad * Tiempo (d = v*t)</strong></ul>
+                    <ul><strong>Tiempo = Distancia / Velocidad (t = d/v)</strong></ul>
+                    <ul><strong>Velocidad = Distancia / Tiempo (v = d/t)</strong></ul>
+                </li>
+            </div>
+            <div>
+                <img src="formulas.jpg" alt="fomulas" width="400px" height="300px">
+            </div>
+        </div>
+        <h3>Calculos:</h3>
+        <a name="Calculo"></a>
+        <p>
+            A continuación presentaremos otra página para calcular las tres formulas que presentamos anteriormente:<br>
+            <br>
+            Seleccione lo que desee calcular:
+        </p>
+    </body>
+    <form>
+        <div class="centrar">
+            <input class="boton" type="button" value="Distancia" onclick="distancia()">
+            <input class="boton" type="button" value="Velocidad" onclick="velocidad()">
+            <input class="boton" type="button" value="Tiempo" onclick="tiempo()">
+        </div>
+    </form>
+    <script>
+        function distancia(){
+            alert('Bienvenido a la opción para calcular la distancia');
+            let velocidad = prompt('Ingrese una velocidad (metros/segundos):');
+            let tiempo = prompt('Ingrese un tiempo (segundos):')
+            let dist = velocidad*tiempo;
+            alert('La distancia es: '+dist);
+        }
+        function velocidad(){
+            alert('Bienvenido a la opción para calcular la velocidad');
+            let distancia = prompt('Ingrese una distancia (metros):')
+            let tiempo = prompt('Ingrese un tiempo (segundos):');
+            let velocidad = distancia/tiempo;
+            alert('El velocidad es: '+velocidad);
+        }
+        function tiempo(){
+            alert('Bienvenido a la opción para calcular el tiempo');
+            let distancia = prompt('Ingrese una distancia (metros):');
+            let velocidad = prompt('Ingrese una velocidad (metros/segundos);')
+            let tiempo = distancia/velocidad;
+            alert('El tiempo es: '+tiempo);
+        }
+    </script>
+</html>
